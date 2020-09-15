@@ -8,7 +8,7 @@
 
 ## Содержание
 
-1. #### Именование объектов языка{#Именование-объектов-языка}
+1. #### [Именование объектов языка] (https://github.com/WebHeroSchool/JS-final-project-esko/blob/local-branch/JS-styleguide.md#%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0)
 2. #### Переменные
 3. #### Точка с запятой
 4. #### Блоки
