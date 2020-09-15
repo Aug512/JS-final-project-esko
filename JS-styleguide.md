@@ -394,11 +394,11 @@
 **Bad practice**
 
 ```js
-  let sum=a+b+c;
+  let sum=a+b+c+d;
 ```
 
 **Good practice**
 
 ```js
-  let sum = a + b + c;
+  let sum = a + b + c + d;
 ```
