@@ -1,0 +1,119 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: url(../img/desk.jpg);
+}
+
+.menu {
+
+  padding-top: 83px;
+  padding-left: 95px;
+
+  &__title {
+    font-size: 57px;
+    line-height: 67px;
+    margin-bottom: 9px;
+  }
+
+  &__subtitle {
+    font-size: 19px;
+    line-height: 22px;
+    padding-left: 2px;
+  }
+
+  &__difficulty {
+    font-size: 33px;
+    line-height: 42px;
+    padding-top: 27px;
+    padding-left: 50px;
+    margin-bottom: 120px;
+  }
+
+  &__start {
+    cursor: pointer;
+    font-size: 31px;
+    line-height: 37px;
+    font-weight: bold;
+    color: #fff;
+    background: #D62B2E;
+    border-radius: 7px;
+    margin-left: -1px;
+    padding: 29px 83px 28px 82px;
+
+    &:hover {
+      transform: translate(2px, 1px);
+      opacity: .9;
+      transition: ease-in-out .2s;
+    }
+  }
+
+  &__cards {
+    .card {
+      transition: transform ease-in-out .4s;
+
+      &--light-rotate:hover {
+        transform: rotate(14.9deg);
+      }
+
+      &--hard-rotate:hover {
+        transform: rotate(42.26deg);
+      }
+    }
+  }
+}
+
+.difficulty-item {
+
+  &__easy {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__medium {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__hard {
+    position: relative;
+    cursor: pointer;
+  }
+}
+.difficulty-item:hover {
+  color: rgba(255, 255, 255, .8);
+  transition: color ease-in-out .4s;
+}
+
+.selected {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -46px;
+    top: 12px;
+    width: 18px;
+    height: 18px;
+    background: #D62B2E;
+    transform: rotate(45deg);
+  }
+}
+
+.card {
+  position: absolute;
+  width: 218px;
+  height: 341px;
+  background: url(../img/reverseCard.png);
+
+  &--light-rotate {
+    left: 889px;
+    bottom: -144px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+    transform: rotate(11.9deg);
+  }
+
+  &--hard-rotate {
+    left: 1069px;
+    bottom: -161px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
+    transform: rotate(39.26deg);
+  }
+}
