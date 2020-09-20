@@ -5,6 +5,7 @@ const startBtn = document.getElementById('start');
 const backBtn = document.getElementById('back');
 const menu = document.getElementById('menu');
 const cardsField = document.getElementById('game');
+let renderedCards = [];
 
 let difficulty = 1;
 let bugCard = 0;
@@ -97,6 +98,10 @@ startBtn.addEventListener('click', () => {
   menu.classList.add('hidden');
   cards.renderCards(difficulty);
   backBtn.classList.remove('hidden');
+  renderedCards = document.querySelectorAll('.card');
+  for (card of renderedCards) {
+    card.addEventListener('click', console.log('click!'));
+  };
 });
 
 backBtn.addEventListener('click', () => {
@@ -106,9 +111,3 @@ backBtn.addEventListener('click', () => {
   backBtn.classList.add('hidden');
 });
 
-backBtn.addEventListener('click', () => {
-  cardsField.innerHTML = '';
-  cardsField.className = ''
-  menu.classList.remove('hidden');
-  backBtn.classList.add('hidden');
-})
