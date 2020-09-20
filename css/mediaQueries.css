@@ -1,5 +1,32 @@
 @media all and (min-width: 320px) and (max-width: 479px) {
+  .menu {
+    padding-left: 0;
+    padding-top: 25px;
+  }
+  .menu__title {
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .menu__subtitle {
+    font-size: 19px;
+  }
+  .menu__difficulty {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+  }
   .menu__cards {
     display: none;
+  }
+  .menu__start {
+    display: block;
+    width: 280px;
+    margin: 0 auto;
+  }
+  .selected::before {
+    left: -30px;
+    top: 3px;
   }
 }

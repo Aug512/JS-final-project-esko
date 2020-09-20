@@ -62,15 +62,17 @@ class Card {
   };
 };
 
-const rotate = function() {
-  this.style.transform = "scale(0)";
-  let isBug = this.data.isBug;
+const rotate = function(card) {
+  card.classList.add('rotate');
+  setTimeout(function () {
+    let isBug = !!(card.getAttribute('isbug'));
   if (isBug) {
-    this.style.backgroundImage = "url(/img/bugCard.png)"
+    card.style.backgroundImage = "url(/img/bugCard.png)"
   } else {
-    this.style.backgroundImage = "url(/img/emptyCard.png)"
+    card.style.backgroundImage = "url(/img/emptyCard.png)"
   }
-  this.style.transform = "scale(1)";
+  card.classList.remove('rotate');
+  }, 800);
 };
 
 const cards = new Card();
@@ -99,15 +101,15 @@ startBtn.addEventListener('click', () => {
   cards.renderCards(difficulty);
   backBtn.classList.remove('hidden');
   renderedCards = document.querySelectorAll('.card');
-  for (card of renderedCards) {
-    card.addEventListener('click', console.log('click!'));
+  for (let i = 2; i < renderedCards.length; i++) {
+    renderedCards[i].addEventListener('click', function() {
+      rotate(renderedCards[i]);
+      renderedCards[i].addEventListener('click', function () {
+        cardsField.innerHTML = '';
+        cardsField.className = ''
+        menu.classList.remove('hidden');
+        backBtn.classList.add('hidden');
+      });
+    });
   };
 });
-
-backBtn.addEventListener('click', () => {
-  cardsField.innerHTML = '';
-  cardsField.className = ''
-  menu.classList.remove('hidden');
-  backBtn.classList.add('hidden');
-});
-

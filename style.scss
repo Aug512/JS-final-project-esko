@@ -1,3 +1,9 @@
+@keyframes cardHover {
+  0% { transform: none; }
+  50% {transform: translateY(-32px) rotate(-3deg);}
+  100% {transform: translateY(-23px);}
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
@@ -102,6 +108,12 @@ body {
   width: 218px;
   height: 341px;
   background: url(../img/reverseCard.png);
+  transform: scale(1);
+  transition: transform ease-in-out .4s;
+
+  // &:hover {
+  //   animation: cardHover .8s ease-in-out forwards;
+  // }
 
   &--light-rotate {
     left: 889px;
@@ -167,4 +179,9 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+.rotate {
+  transition: transform ease-in-out .4s;
+  transform: scaleX(0);
 }
