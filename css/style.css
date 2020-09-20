@@ -134,6 +134,7 @@ body {
   width: 218px;
   height: 341px;
   background: url(../img/reverseCard.png);
+  background-size: contain;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform ease-in-out .4s;
@@ -143,8 +144,8 @@ body {
 }
 
 .card--light-rotate {
-  left: 889px;
-  bottom: 28px;
+  right: 333px;
+  top: 531px;
   -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
           filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
   -webkit-transform: rotate(11.9deg);
@@ -152,8 +153,8 @@ body {
 }
 
 .card--hard-rotate {
-  left: 1069px;
-  bottom: 10px;
+  right: 153px;
+  top: 548px;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
   -webkit-transform: rotate(39.26deg);
@@ -191,7 +192,7 @@ body {
   width: 60vw;
   height: 81vh;
   margin: 0 auto;
-  padding-top: 139px;
+  padding-top: 80px;
 }
 
 .medium .card {
@@ -205,7 +206,7 @@ body {
   width: 85vw;
   height: 81vh;
   margin: 0 auto;
-  padding-top: 139px;
+  padding-top: 80px;
 }
 
 .hard .card {

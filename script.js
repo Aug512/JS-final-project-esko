@@ -2,7 +2,6 @@ const easyBtn = document.getElementById('easy');
 const mediumBtn = document.getElementById('medium');
 const hardBtn = document.getElementById('hard');
 const startBtn = document.getElementById('start');
-const backBtn = document.getElementById('back');
 const menu = document.getElementById('menu');
 const cardsField = document.getElementById('game');
 let renderedCards = [];
@@ -99,7 +98,6 @@ hardBtn.addEventListener('click', () => {
 startBtn.addEventListener('click', () => {
   menu.classList.add('hidden');
   cards.renderCards(difficulty);
-  backBtn.classList.remove('hidden');
   renderedCards = document.querySelectorAll('.card');
   for (let i = 2; i < renderedCards.length; i++) {
     renderedCards[i].addEventListener('click', function() {
@@ -108,7 +106,6 @@ startBtn.addEventListener('click', () => {
         cardsField.innerHTML = '';
         cardsField.className = ''
         menu.classList.remove('hidden');
-        backBtn.classList.add('hidden');
       });
     });
   };

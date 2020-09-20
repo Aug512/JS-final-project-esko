@@ -1,4 +1,4 @@
-@media all and (min-width: 320px) and (max-width: 479px) {
+@media all and (min-width: 320px) and (max-width: 767px) {
   .menu {
     padding-left: 0;
     padding-top: 25px;
@@ -14,7 +14,7 @@
   .menu__difficulty {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: calc(9vw + 30px);
     padding-top: 5px;
   }
   .menu__cards {
@@ -25,8 +25,150 @@
     width: 280px;
     margin: 0 auto;
   }
+  .medium {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90vw;
+    height: 82vh;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  .hard {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 55vw;
+    height: 93vh;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .hard .card {
+    width: 19vw;
+    height: calc(19vw*1.57);
+  }
+  .card {
+    width: 30vw;
+    height: calc(30vw*1.57);
+    background-size: cover;
+  }
+  .easy .card,
+  .medium .card,
+  .hard .card {
+    margin: 0 3px;
+  }
   .selected::before {
     left: -30px;
     top: 3px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .menu {
+    padding-left: 0;
+    padding-top: 25px;
+  }
+  .menu__title {
+    font-size: 45px;
+    line-height: 55px;
+    text-align: center;
+  }
+  .menu__subtitle {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .menu__difficulty {
+    font-size: 27px;
+    line-height: 35px;
+    margin-bottom: calc(9vw + 30px);
+    padding-top: 5px;
+  }
+  .menu__cards .card {
+    width: 146px;
+    height: 228px;
+  }
+  .menu__cards .card--hard-rotate {
+    right: 99px;
+    top: 219px;
+  }
+  .menu__cards .card--light-rotate {
+    right: 225px;
+    top: 206px;
+  }
+  .menu__start {
+    display: block;
+    width: 280px;
+    margin: 0 auto;
+  }
+  .hard {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 98vw;
+    height: 46vh;
+    margin: 0 auto;
+    padding-top: 251px;
+  }
+  .hard .card {
+    width: 18vw;
+    height: calc(18vw*1.57);
+    background-size: cover;
+  }
+  .medium {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 85vw;
+    height: 90vh;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .medium .card {
+    width: 21vw;
+    height: calc(21vw*1.57);
+    background-size: cover;
+  }
+  .easy .card,
+  .medium .card,
+  .hard .card {
+    margin: 0 3px;
+  }
+  .selected::before {
+    left: -30px;
+    top: 3px;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  .card--light-rotate {
+    top: 270px;
+    right: 340px;
+  }
+  .card--hard-rotate {
+    top: 287px;
+    right: 179px;
+  }
+  .hard {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100vw;
+    height: 78vh;
+    margin: 0 auto;
+    padding-top: 70px;
+  }
+  .hard .card {
+    width: 18vw;
+    height: calc(18vw*1.57);
+    background-size: cover;
+    margin: 1px 3px 0;
+  }
+  .medium {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 85vw;
+    height: 90vh;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .medium .card {
+    width: 21vw;
+    height: calc(21vw*1.57);
+    background-size: cover;
   }
 }
