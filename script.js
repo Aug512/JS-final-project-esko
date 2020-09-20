@@ -59,17 +59,17 @@ class Card {
         break;
     }
   };
+};
 
-  // rotate() {
-  //   this.style.transform = "scale(0)";
-  //   let isBug = this.data.isBug;
-  //   if (isBug) {
-  //     this.style.backgroundImage = "url(/img/bugCard.png)"
-  //   } else {
-  //     this.style.backgroundImage = "url(/img/emptyCard.png)"
-  //   }
-  //   this.style.transform = "scale(1)";
-  // };
+const rotate = function() {
+  this.style.transform = "scale(0)";
+  let isBug = this.data.isBug;
+  if (isBug) {
+    this.style.backgroundImage = "url(/img/bugCard.png)"
+  } else {
+    this.style.backgroundImage = "url(/img/emptyCard.png)"
+  }
+  this.style.transform = "scale(1)";
 };
 
 const cards = new Card();
@@ -104,5 +104,11 @@ backBtn.addEventListener('click', () => {
   cardsField.className = ''
   menu.classList.remove('hidden');
   backBtn.classList.add('hidden');
-})
+});
 
+backBtn.addEventListener('click', () => {
+  cardsField.innerHTML = '';
+  cardsField.className = ''
+  menu.classList.remove('hidden');
+  backBtn.classList.add('hidden');
+})
