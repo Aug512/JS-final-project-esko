@@ -108,7 +108,7 @@ body {
 
 .card--light-rotate {
   left: 889px;
-  bottom: -144px;
+  bottom: 28px;
   -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
           filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
   -webkit-transform: rotate(11.9deg);
@@ -117,9 +117,66 @@ body {
 
 .card--hard-rotate {
   left: 1069px;
-  bottom: -161px;
+  bottom: 10px;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
   -webkit-transform: rotate(39.26deg);
           transform: rotate(39.26deg);
+}
+
+#back {
+  position: absolute;
+  cursor: pointer;
+  bottom: 5px;
+  right: 5px;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.easy .card {
+  position: static;
+  margin: 106px 12px 0;
+}
+
+.medium {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60vw;
+  height: 81vh;
+  margin: 0 auto;
+  padding-top: 139px;
+}
+
+.medium .card {
+  position: static;
+  margin: 1px 12px 0;
+}
+
+.hard {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 85vw;
+  height: 81vh;
+  margin: 0 auto;
+  padding-top: 139px;
+}
+
+.hard .card {
+  position: static;
+  margin: 1px 12px 0;
+}
+
+.hidden {
+  display: none !important;
 }

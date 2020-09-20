@@ -13,12 +13,12 @@
     <span class="menu__subtitle"><b>Выберите сложность и игра начнётся.</b> Чем выше уровень - тем больше будет выборка карт.</span>
 
     <div class="menu__difficulty">
-      <h2 class="difficulty-item difficulty-item__easy selected">Простой</h2>
-      <h2 class="difficulty-item difficulty-item__medium">Средний</h2>
-      <h2 class="difficulty-item difficulty-item__hard">Сложный</h2>
+      <h2 class="difficulty-item difficulty-item__easy selected" id="easy">Простой</h2>
+      <h2 class="difficulty-item difficulty-item__medium" id="medium">Средний</h2>
+      <h2 class="difficulty-item difficulty-item__hard" id="hard">Сложный</h2>
     </div>
 
-    <button class="menu__start">Начать игру</button>
+    <button class="menu__start" id="start">Начать игру</button>
 
     <div class="menu__cards">
       <div class="card card--light-rotate"></div>
@@ -27,6 +27,8 @@
   </div>
 
   <div id="game"></div>
+
+  <span id="back" class="hidden">&#8701; Вернуться в меню</span>
 
   <script src="script.js"></script> 
 </body>
