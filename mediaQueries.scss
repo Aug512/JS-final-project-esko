@@ -11,7 +11,9 @@
     }
 
     &__subtitle {
-      font-size: 19px;
+      display: block;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     &__difficulty {
@@ -32,37 +34,49 @@
     }
   }
 
+  .game {
+    padding-top: 0;
+  }
+
+  .card,
+  .card__front,
+  .card__back {
+    width: 30vw;
+    height: calc(30vw*1.57);
+  }
+
   .medium {
     flex-wrap: wrap;
     width: 90vw;
-    height: 82vh;
+    height: 100vh;
     margin: 0 auto;
-    padding-top: 50px;
+
+    .card,
+    .card__front,
+    .card__back {
+      width: 36vw;
+      height: calc(36vw*1.57);
+    }
   }
 
   .hard {
     flex-wrap: wrap;
-    width: 55vw;
-    height: 93vh;
+    width: 60vw;
+    height: 100vh;
     margin: 0 auto;
-    padding-top: 0;
 
-    .card {
-      width: 19vw;
-      height: calc(19vw*1.57);
+    .card,
+    .card__front,
+    .card__back {
+      width: 21vw;
+      height: calc(21vw*1.57);
     }
-  }
-
-  .card {
-    width: 30vw;
-    height: calc(30vw*1.57);
-    background-size: cover;
   }
 
   .easy .card,
   .medium .card,
   .hard .card {
-    margin: 0 3px;
+    margin: 3px;
   }
 
   .selected::before {
@@ -70,6 +84,8 @@
     top: 3px;
   }
 };
+
+
 
 @media all and (min-width : 768px) and (max-width: 1023px) {
   .menu {

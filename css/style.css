@@ -54,11 +54,12 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background: url(../img/desk.jpg);
+  margin: 0;
 }
 
 .menu {
-  padding-top: 83px;
-  padding-left: 95px;
+  padding-top: 90px;
+  padding-left: 103px;
 }
 
 .menu__title {
@@ -144,6 +145,7 @@ body {
   position: relative;
   width: 218px;
   height: 341px;
+  margin: 12px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
@@ -194,16 +196,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 61px;
 }
 
 .game .card:hover {
   -webkit-animation: cardHover .8s ease-in-out forwards;
           animation: cardHover .8s ease-in-out forwards;
-}
-
-.easy .card {
-  position: static;
-  margin: 106px 12px 0;
 }
 
 .medium {
@@ -212,12 +210,7 @@ body {
   width: 60vw;
   height: 81vh;
   margin: 0 auto;
-  padding-top: 80px;
-}
-
-.medium .card {
-  position: static;
-  margin: 1px 12px 0;
+  padding-top: 148px;
 }
 
 .hard {
@@ -226,12 +219,7 @@ body {
   width: 85vw;
   height: 81vh;
   margin: 0 auto;
-  padding-top: 80px;
-}
-
-.hard .card {
-  position: static;
-  margin: 1px 12px 0;
+  padding-top: 148px;
 }
 
 .hidden {

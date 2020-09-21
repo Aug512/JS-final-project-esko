@@ -9,7 +9,9 @@
     text-align: center;
   }
   .menu__subtitle {
-    font-size: 19px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .menu__difficulty {
     font-size: 20px;
@@ -25,35 +27,45 @@
     width: 280px;
     margin: 0 auto;
   }
+  .game {
+    padding-top: 0;
+  }
+  .card,
+  .card__front,
+  .card__back {
+    width: 30vw;
+    height: calc(30vw*1.57);
+  }
   .medium {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 90vw;
-    height: 82vh;
+    height: 100vh;
     margin: 0 auto;
-    padding-top: 50px;
+  }
+  .medium .card,
+  .medium .card__front,
+  .medium .card__back {
+    width: 36vw;
+    height: calc(36vw*1.57);
   }
   .hard {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 55vw;
-    height: 93vh;
+    width: 60vw;
+    height: 100vh;
     margin: 0 auto;
-    padding-top: 0;
   }
-  .hard .card {
-    width: 19vw;
-    height: calc(19vw*1.57);
-  }
-  .card {
-    width: 30vw;
-    height: calc(30vw*1.57);
-    background-size: cover;
+  .hard .card,
+  .hard .card__front,
+  .hard .card__back {
+    width: 21vw;
+    height: calc(21vw*1.57);
   }
   .easy .card,
   .medium .card,
   .hard .card {
-    margin: 0 3px;
+    margin: 3px;
   }
   .selected::before {
     left: -30px;
