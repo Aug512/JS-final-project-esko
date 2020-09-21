@@ -38,11 +38,11 @@ class Card {
         break;
 
       case 2 :
-        generateCards(6, 'medium');
+        this.generateCards(6, 'medium');
         break;
 
       case 3 :
-        generateCards(10, 'hard');
+        this.generateCards(10, 'hard');
         break;
     }
   };

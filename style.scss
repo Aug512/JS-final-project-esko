@@ -56,14 +56,6 @@ body {
   &__cards {
     .card {
       transition: transform ease-in-out .4s;
-
-      &--light-rotate:hover {
-        transform: rotate(14.9deg);
-      }
-
-      &--hard-rotate:hover {
-        transform: rotate(42.26deg);
-      }
     }
   }
 }
@@ -112,10 +104,6 @@ body {
   transform: scale(1);
   transition: transform ease-in-out .4s;
 
-  &:hover {
-    animation: cardHover .8s ease-in-out forwards;
-  }
-
   &--light-rotate {
     right: 333px;
     top: 531px;
@@ -143,6 +131,10 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;  
+
+  .card:hover {
+    animation: cardHover .8s ease-in-out forwards;
+  }
 }
 
 .easy {

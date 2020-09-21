@@ -86,16 +86,6 @@ body {
   transition: transform ease-in-out .4s, -webkit-transform ease-in-out .4s;
 }
 
-.menu__cards .card--light-rotate:hover {
-  -webkit-transform: rotate(14.9deg);
-          transform: rotate(14.9deg);
-}
-
-.menu__cards .card--hard-rotate:hover {
-  -webkit-transform: rotate(42.26deg);
-          transform: rotate(42.26deg);
-}
-
 .difficulty-item__easy {
   position: relative;
   cursor: pointer;
@@ -143,11 +133,6 @@ body {
   transition: transform ease-in-out .4s, -webkit-transform ease-in-out .4s;
 }
 
-.card:hover {
-  -webkit-animation: cardHover .8s ease-in-out forwards;
-          animation: cardHover .8s ease-in-out forwards;
-}
-
 .card--light-rotate {
   right: 333px;
   top: 531px;
@@ -184,6 +169,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.game .card:hover {
+  -webkit-animation: cardHover .8s ease-in-out forwards;
+          animation: cardHover .8s ease-in-out forwards;
 }
 
 .easy .card {
