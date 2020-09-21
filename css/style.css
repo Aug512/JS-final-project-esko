@@ -143,6 +143,11 @@ body {
   transition: transform ease-in-out .4s, -webkit-transform ease-in-out .4s;
 }
 
+.card:hover {
+  -webkit-animation: cardHover .8s ease-in-out forwards;
+          animation: cardHover .8s ease-in-out forwards;
+}
+
 .card--light-rotate {
   right: 333px;
   top: 531px;

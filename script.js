@@ -19,43 +19,30 @@ class Card {
     cardsField.append(card);
   };
 
+  generateCards (cards, lvl) {
+    bugCard = Math.floor(Math.random() * cards);
+    for (let i = 0; i < cards; i++) {
+      if (i === bugCard) {
+        this.renderCard(true);
+      } else {
+        this.renderCard(false);
+      };
+    }
+    cardsField.className = `game ${lvl}`;
+  };
+
   renderCards(difficulty) {
     switch (difficulty) {
       case 1 :
-        bugCard = Math.floor(Math.random() * 3);
-        for (let i = 0; i < 3; i++) {
-          if (i === bugCard) {
-            this.renderCard(true);
-          } else {
-            this.renderCard(false);
-          };
-        }
-        cardsField.className = 'game easy';
-
+        this.generateCards(3, 'easy');
         break;
+
       case 2 :
-        bugCard = Math.floor(Math.random() * 6);
-        for (let i = 0; i < 6; i++) {
-          if (i === bugCard) {
-            this.renderCard(true);
-          } else {
-            this.renderCard(false);
-          };
-        }
-        cardsField.className = 'game medium';
-
+        generateCards(6, 'medium');
         break;
-      case 3 :
-        bugCard = Math.floor(Math.random() * 10);
-        for (let i = 0; i < 10; i++) {
-          if (i === bugCard) {
-            this.renderCard(true);
-          } else {
-            this.renderCard(false);
-          };
-        }
-        cardsField.className = 'game hard';
 
+      case 3 :
+        generateCards(10, 'hard');
         break;
     }
   };
@@ -82,12 +69,14 @@ easyBtn.addEventListener('click', () => {
   mediumBtn.classList.remove('selected');
   hardBtn.classList.remove('selected');
 });
+
 mediumBtn.addEventListener('click', () => {
   difficulty = 2;
   mediumBtn.classList.add('selected');
   easyBtn.classList.remove('selected');
   hardBtn.classList.remove('selected');
 });
+
 hardBtn.addEventListener('click', () => {
   difficulty = 3;
   hardBtn.classList.add('selected');
@@ -99,7 +88,7 @@ startBtn.addEventListener('click', () => {
   menu.classList.add('hidden');
   cards.renderCards(difficulty);
   renderedCards = document.querySelectorAll('.card');
-  for (let i = 2; i < renderedCards.length; i++) {
+  for (let i = 2; i < renderedCards.length; i++) {  //counter starts from 2 because we have 2 cards on start screen
     renderedCards[i].addEventListener('click', function() {
       rotate(renderedCards[i]);
       renderedCards[i].addEventListener('click', function () {

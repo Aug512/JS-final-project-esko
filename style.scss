@@ -112,9 +112,9 @@ body {
   transform: scale(1);
   transition: transform ease-in-out .4s;
 
-  // &:hover {
-  //   animation: cardHover .8s ease-in-out forwards;
-  // }
+  &:hover {
+    animation: cardHover .8s ease-in-out forwards;
+  }
 
   &--light-rotate {
     right: 333px;
