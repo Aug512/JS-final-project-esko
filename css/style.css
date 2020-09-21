@@ -28,6 +28,28 @@
   }
 }
 
+@-webkit-keyframes rotateCard {
+  0% {
+    -webkit-transform: translateY(-23px);
+            transform: translateY(-23px);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes rotateCard {
+  0% {
+    -webkit-transform: translateY(-23px);
+            transform: translateY(-23px);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
@@ -75,15 +97,14 @@ body {
   -webkit-transform: translate(2px, 1px);
           transform: translate(2px, 1px);
   opacity: .9;
-  -webkit-transition: ease-in-out .2s;
-  transition: ease-in-out .2s;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
-.menu__cards .card {
-  -webkit-transition: -webkit-transform ease-in-out .4s;
-  transition: -webkit-transform ease-in-out .4s;
-  transition: transform ease-in-out .4s;
-  transition: transform ease-in-out .4s, -webkit-transform ease-in-out .4s;
+.menu__cards {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .difficulty-item__easy {
@@ -103,8 +124,8 @@ body {
 
 .difficulty-item:hover {
   color: rgba(255, 255, 255, 0.8);
-  -webkit-transition: color ease-in-out .4s;
-  transition: color ease-in-out .4s;
+  -webkit-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out;
 }
 
 .selected::before {
@@ -120,17 +141,21 @@ body {
 }
 
 .card {
-  position: absolute;
+  position: relative;
   width: 218px;
   height: 341px;
-  background: url(../img/reverseCard.png);
-  background-size: contain;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform ease-in-out .4s;
-  transition: -webkit-transform ease-in-out .4s;
-  transition: transform ease-in-out .4s;
-  transition: transform ease-in-out .4s, -webkit-transform ease-in-out .4s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card__front {
+  position: absolute;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card__back {
+  position: absolute;
 }
 
 .card--light-rotate {
@@ -144,7 +169,7 @@ body {
 
 .card--hard-rotate {
   right: 153px;
-  top: 548px;
+  top: 208px;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
   -webkit-transform: rotate(39.26deg);
@@ -214,10 +239,6 @@ body {
 }
 
 .rotate {
-  -webkit-transition: -webkit-transform ease-in-out .4s;
-  transition: -webkit-transform ease-in-out .4s;
-  transition: transform ease-in-out .4s;
-  transition: transform ease-in-out .4s, -webkit-transform ease-in-out .4s;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  -webkit-animation: rotateCard .4s ease-in-out forwards !important;
+          animation: rotateCard .4s ease-in-out forwards !important;
 }

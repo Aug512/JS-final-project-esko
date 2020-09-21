@@ -14,7 +14,15 @@ class Card {
     const card = document.createElement('div');
     card.classList.add('card');
     if (isBug) {
-      card.setAttribute('isBug', 'true');
+      card.innerHTML = `
+        <img class="card__back" src="./img/reverseCard.png">
+        <img class="card__front" src="./img/bugCard.png">
+      `;
+    } else {
+      card.innerHTML = `
+        <img class="card__front" src="./img/emptyCard.png">
+        <img class="card__back" src="./img/reverseCard.png">
+      `;
     };
     cardsField.append(card);
   };
@@ -48,18 +56,18 @@ class Card {
   };
 };
 
-const rotate = function(card) {
-  card.classList.add('rotate');
-  setTimeout(function () {
-    let isBug = !!(card.getAttribute('isbug'));
-  if (isBug) {
-    card.style.backgroundImage = "url(/img/bugCard.png)"
-  } else {
-    card.style.backgroundImage = "url(/img/emptyCard.png)"
-  }
-  card.classList.remove('rotate');
-  }, 800);
-};
+// const rotate = function(card) {
+//   card.classList.add('rotate');
+//   setTimeout(function () {
+//     let isBug = !!(card.getAttribute('isbug'));
+//   if (isBug) {
+//     card.style.backgroundImage = "url(./img/bugCard.png)"
+//   } else {
+//     card.style.backgroundImage = "url(./img/emptyCard.png)"
+//   }
+//   card.classList.remove('rotate');
+//   }, 800);
+// };
 
 const cards = new Card();
 
@@ -90,7 +98,7 @@ startBtn.addEventListener('click', () => {
   renderedCards = document.querySelectorAll('.card');
   for (let i = 2; i < renderedCards.length; i++) {  //counter starts from 2 because we have 2 cards on start screen
     renderedCards[i].addEventListener('click', function() {
-      rotate(renderedCards[i]);
+      renderedCards[i].classList.add('rotate');
       renderedCards[i].addEventListener('click', function () {
         cardsField.innerHTML = '';
         cardsField.className = ''
