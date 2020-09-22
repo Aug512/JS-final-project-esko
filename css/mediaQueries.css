@@ -189,34 +189,56 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  .menu {
+    padding-top: 0;
+  }
+  .menu__cards {
+    display: none;
+  }
+  .menu__difficulty {
+    margin-bottom: 0;
+  }
+  .menu__start {
+    position: absolute;
+    right: 50px;
+    top: 195px;
+  }
+  .card,
+  .card__front,
+  .card__back {
+    width: 27vw;
+    height: calc(27vw*1.57);
+  }
   .medium {
-    width: 63vw;
+    width: 55vw;
+    padding-top: 0 !important;
   }
   .medium .card,
   .medium .card__front,
   .medium .card__back {
-    width: 17vw;
-    height: calc(17vw*1.57);
+    width: 14vw;
+    height: calc(14vw*1.57);
   }
   .hard {
-    width: 100vw;
+    width: 80vw;
+    padding-top: 0 !important;
   }
   .hard .card,
   .hard .card__front,
   .hard .card__back {
-    width: 17vw;
-    height: calc(17vw*1.57);
+    width: 14vw;
+    height: calc(14vw*1.57);
   }
 }
 
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   .card--light-rotate {
     top: 270px;
-    right: 340px;
+    right: 300px;
   }
   .card--hard-rotate {
-    top: 287px;
-    right: 179px;
+    top: -25px;
+    right: 139px;
   }
   .hard {
     -ms-flex-wrap: wrap;
@@ -226,11 +248,11 @@
     margin: 0 auto;
     padding-top: 70px;
   }
-  .hard .card {
-    width: 18vw;
-    height: calc(18vw*1.57);
-    background-size: cover;
-    margin: 1px 3px 0;
+  .hard .card,
+  .hard .card__front,
+  .hard .card__back {
+    width: 17vw;
+    height: calc(17vw*1.57);
   }
   .medium {
     -ms-flex-wrap: wrap;
