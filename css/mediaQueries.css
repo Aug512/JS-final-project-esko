@@ -73,6 +73,35 @@
   }
 }
 
+@media all and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .menu__difficulty {
+    margin-bottom: 0;
+  }
+  .menu__start {
+    position: absolute;
+    right: 10px;
+    top: 165px;
+  }
+  .medium {
+    width: 63vw;
+  }
+  .medium .card,
+  .medium .card__front,
+  .medium .card__back {
+    width: 17vw;
+    height: calc(17vw*1.57);
+  }
+  .hard {
+    width: 100vw;
+  }
+  .hard .card,
+  .hard .card__front,
+  .hard .card__back {
+    width: 17vw;
+    height: calc(17vw*1.57);
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .menu {
     padding-left: 0;
