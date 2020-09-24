@@ -56,20 +56,13 @@ class Card {
   };
 };
 
-// const rotate = function(card) {
-//   card.classList.add('rotate');
-//   setTimeout(function () {
-//     let isBug = !!(card.getAttribute('isbug'));
-//   if (isBug) {
-//     card.style.backgroundImage = "url(./img/bugCard.png)"
-//   } else {
-//     card.style.backgroundImage = "url(./img/emptyCard.png)"
-//   }
-//   card.classList.remove('rotate');
-//   }, 800);
-// };
-
 const cards = new Card();
+
+const goToMenu = function () {
+  cardsField.innerHTML = '';
+  cardsField.className = ''
+  menu.classList.remove('hidden');
+};
 
 easyBtn.addEventListener('click', () => {
   difficulty = 1;
@@ -93,17 +86,16 @@ hardBtn.addEventListener('click', () => {
 });
 
 startBtn.addEventListener('click', () => {
+  cardsField.removeEventListener('click', goToMenu);
   menu.classList.add('hidden');
   cards.renderCards(difficulty);
   renderedCards = document.querySelectorAll('.card');
   for (let i = 2; i < renderedCards.length; i++) {  //counter starts from 2 because we have 2 cards on start screen
     renderedCards[i].addEventListener('click', function() {
       renderedCards[i].classList.add('rotate');
-      renderedCards[i].addEventListener('click', function () {
-        cardsField.innerHTML = '';
-        cardsField.className = ''
-        menu.classList.remove('hidden');
-      });
+      setTimeout(function() {
+        cardsField.addEventListener('click', goToMenu, {once: true});
+      }, 400);
     });
   };
 });
