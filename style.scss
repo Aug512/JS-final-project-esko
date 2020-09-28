@@ -173,3 +173,10 @@ body {
 .rotate {
   animation: rotateCard .4s ease-in-out forwards !important;
 }
+
+.flex {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

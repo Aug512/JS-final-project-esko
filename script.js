@@ -60,7 +60,8 @@ const cards = new Card();
 
 const goToMenu = function () {
   cardsField.innerHTML = '';
-  cardsField.className = ''
+  cardsField.className = '';
+  document.body.classList.remove('flex');
   menu.classList.remove('hidden');
 };
 
@@ -88,6 +89,7 @@ hardBtn.addEventListener('click', () => {
 startBtn.addEventListener('click', () => {
   cardsField.removeEventListener('click', goToMenu);
   menu.classList.add('hidden');
+  document.body.classList.add('flex');
   cards.renderCards(difficulty);
   renderedCards = document.querySelectorAll('.card');
   for (let i = 2; i < renderedCards.length; i++) {  //counter starts from 2 because we have 2 cards on start screen

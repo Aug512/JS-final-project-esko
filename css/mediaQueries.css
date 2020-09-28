@@ -40,7 +40,7 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 90vw;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
   }
   .medium .card,
@@ -53,7 +53,7 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 60vw;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
   }
   .hard .card,
@@ -125,54 +125,42 @@
     padding-top: 5px;
   }
   .menu__cards {
-    top: -25px;
-  }
-  .menu__cards .card--hard-rotate {
-    right: 119px;
-    top: -21px;
-  }
-  .menu__cards .card--light-rotate {
-    right: 225px;
-    top: 206px;
-  }
-  .menu__cards .card,
-  .menu__card {
-    width: 146px;
-    height: 228px;
+    display: none;
   }
   .menu__start {
     display: block;
     width: 280px;
     margin: 0 auto;
   }
-  .card,
-  .card__front,
-  .card__back {
-    width: 30vw;
-    height: calc(30vw*1.57);
-  }
-  .medium {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 100vw;
-    height: 90vh;
-    margin: 0 auto;
-    padding-top: 30px !important;
-  }
   .hard {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: 46vh;
+    width: 98vw;
+    height: auto;
     margin: 0 auto;
-    padding-top: 251px !important;
+    padding-top: 251px;
   }
   .hard .card,
   .hard .card__front,
   .hard .card__back {
-    width: 19vw;
-    height: calc(19vw*1.57);
+    width: 18vw;
+    height: calc(18vw*1.57);
+    background-size: cover;
+  }
+  .medium {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 85vw;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .medium .card,
+  .medium .card__front,
+  .medium .card__back {
+    width: 21vw;
+    height: calc(21vw*1.57);
+    background-size: cover;
   }
   .easy .card,
   .medium .card,
@@ -234,35 +222,39 @@
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   .card--light-rotate {
     top: 270px;
-    right: 300px;
+    right: 340px;
   }
   .card--hard-rotate {
-    top: -25px;
-    right: 139px;
+    top: -15px;
+    right: 179px;
   }
   .hard {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100vw;
-    height: 78vh;
+    height: auto;
     margin: 0 auto;
     padding-top: 70px;
   }
   .hard .card,
   .hard .card__front,
   .hard .card__back {
-    width: 17vw;
-    height: calc(17vw*1.57);
+    width: 18vw;
+    height: calc(18vw*1.57);
+    background-size: cover;
+    margin: 3px;
   }
   .medium {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 85vw;
-    height: 90vh;
+    height: auto;
     margin: 0 auto;
     padding-top: 30px;
   }
-  .medium .card {
+  .medium .card,
+  .medium .card__front,
+  .medium .card__back {
     width: 21vw;
     height: calc(21vw*1.57);
     background-size: cover;
