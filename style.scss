@@ -1,0 +1,182 @@
+@keyframes cardHover {
+  0% { transform: none; }
+  50% {transform: translateY(-32px) rotate(-3deg);}
+  100% {transform: translateY(-23px);}
+}
+
+@keyframes rotateCard {
+  0% {transform: translateY(-23px);}
+  100% {transform: rotateY(180deg);}
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: url(../img/desk.jpg);
+  margin: 0;
+}
+
+.menu {
+  padding-top: 90px;
+  padding-left: 103px;
+
+  &__title {
+    font-size: 57px;
+    line-height: 67px;
+    margin-bottom: 9px;
+  }
+
+  &__subtitle {
+    font-size: 19px;
+    line-height: 22px;
+    padding-left: 2px;
+  }
+
+  &__difficulty {
+    font-size: 33px;
+    line-height: 42px;
+    padding-top: 27px;
+    padding-left: 50px;
+    margin-bottom: 120px;
+  }
+
+  &__start {
+    cursor: pointer;
+    font-size: 31px;
+    line-height: 37px;
+    font-weight: bold;
+    color: #fff;
+    background: #D62B2E;
+    border-radius: 7px;
+    margin-left: -1px;
+    padding: 29px 83px 28px 82px;
+
+    &:hover {
+      transform: translate(2px, 1px);
+      opacity: .9;
+      transition: .2s ease-in-out;
+    }
+  }
+
+  &__cards {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.difficulty-item {
+
+  &__easy {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__medium {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__hard {
+    position: relative;
+    cursor: pointer;
+  }
+}
+.difficulty-item:hover {
+  color: rgba(255, 255, 255, .8);
+  transition: color .4s ease-in-out;
+}
+
+.selected {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -46px;
+    top: 12px;
+    width: 18px;
+    height: 18px;
+    background: #D62B2E;
+    transform: rotate(45deg);
+  }
+}
+
+.card {
+  position: relative;
+  width: 218px;
+  height: 341px;
+  margin: 12px;
+  transform-style: preserve-3d;
+
+  &__front {
+    position: absolute;
+    transform: rotateY(180deg);
+  }
+
+  &__back {
+    position: absolute;
+  }
+
+  &--light-rotate {
+    right: 333px;
+    top: 531px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+    transform: rotate(11.9deg);
+  }
+
+  &--hard-rotate {
+    right: 153px;
+    top: 208px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
+    transform: rotate(39.26deg);
+  }
+}
+
+#back {
+  position: absolute;
+  cursor: pointer;
+  bottom: 5px;
+  right: 5px;
+}
+
+.game {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding-top: 61px;
+
+  .card:hover {
+    animation: cardHover .8s ease-in-out forwards;
+  }
+}
+
+.medium {
+  flex-wrap: wrap;
+  width: 730px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 148px;
+}
+
+.hard {
+  flex-wrap: wrap;
+  width: 1210px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 148px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.rotate {
+  animation: rotateCard .4s ease-in-out forwards !important;
+}
+
+.flex {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
